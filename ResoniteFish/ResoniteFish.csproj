@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>ExampleMod</RootNamespace>
-		<AssemblyName>ExampleMod</AssemblyName>
+		<RootNamespace>ResoniteFish</RootNamespace>
+		<AssemblyName>ResoniteFish</AssemblyName>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<TargetFramework>net472</TargetFramework>
 		<FileAlignment>512</FileAlignment>
@@ -18,9 +18,11 @@
 		<ResonitePath>$(MSBuildThisFileDirectory)Resonite/</ResonitePath>
 		<ResonitePath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Resonite\')">C:\Program Files (x86)\Steam\steamapps\common\Resonite\</ResonitePath>
 		<ResonitePath Condition="Exists('$(HOME)/.steam/steam/steamapps/common/Resonite/')">$(HOME)/.steam/steam/steamapps/common/Resonite/</ResonitePath>
+
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
 		<Reference Include="ResoniteModLoader">
 		    <HintPath>$(ResonitePath)Libraries\ResoniteModLoader.dll</HintPath>
 		    <Private>False</Private>
@@ -30,9 +32,13 @@
 		    <HintPath Condition="Exists('$(ResonitePath)0Harmony.dll')">$(ResonitePath)0Harmony.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="FrooxEngine">
+		<Reference Include="FrooxEngine" Publicize="true">
 		    <HintPath>$(ResonitePath)Resonite_Data\Managed\FrooxEngine.dll</HintPath>
 		    <Private>False</Private>
+		</Reference>
+		<Reference Include="Elements.Core">
+			<HintPath>$(ResonitePath)Resonite_Data\Managed\Elements.Core.dll</HintPath>
+			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
 
