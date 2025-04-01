@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<RootNamespace>ResoniteFish</RootNamespace>
-		<AssemblyName>ResoniteFish</AssemblyName>
+		<AssemblyName>Fish</AssemblyName>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<TargetFramework>net472</TargetFramework>
 		<FileAlignment>512</FileAlignment>
@@ -38,10 +38,6 @@
 		</Reference>
 		<Reference Include="Elements.Core">
 			<HintPath>$(ResonitePath)Resonite_Data\Managed\Elements.Core.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="Elements.Assets">
-			<HintPath>$(ResonitePath)Resonite_Data\Managed\Elements.Assets.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
