@@ -8,9 +8,9 @@ using ResoniteModLoader;
 
 namespace ResoniteFish;
 public class ResoniteFish : ResoniteMod {
-	internal const string VERSION_CONSTANT = "1.0.0";
+	internal const string VERSION_CONSTANT = "1.1.0";
 	public override string Name => "Fish";
-	public override string Author => "Delta";
+	public override string Author => "Delta & Raidriar";
 	public override string Version => VERSION_CONSTANT;
 	public override string Link => "https://github.com/XDelta/ResoniteFish";
 	public static ModConfiguration? Config;
